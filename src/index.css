@@ -1,0 +1,80 @@
+:root{
+  --accent-color-1: rgb(34, 140, 226);
+}
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-light-grey{
+  background-color: rgb(242, 242, 242) !important;
+}
+
+#carouselId{
+  width: 80%;
+  max-width: 400px;
+  min-width: 300px;
+
+}
+
+.carousel-indicators{
+  margin-bottom: -8%;
+  filter: invert(100%);
+}
+
+.object-fit-none{
+  object-fit: none;
+}
+
+.accent-bg-color-1{
+  background-color:var(--accent-color-1);
+}
+
+#cards-container{
+  max-width: 1400px;
+  gap:10px
+}
+
+.card-primary-img{
+  height: 55%;
+  object-fit: none;
+}
+
+.card-secondary-img{
+  margin-top: -8%;
+  margin-left: 8%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.carousel-logo{
+  height: 50px ;
+}
+
+.slick-next{display: none !important;}
+.slick-prev{display: none !important;}
+
+#carousel-logo-container{
+  height: 200px !important;
+  width: 200px !important;
+}
+
+
+.slick-slide{
+  display: flex !important;
+  justify-content: center !important;
+}
