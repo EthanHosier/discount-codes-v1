@@ -78,3 +78,13 @@ code {
   display: flex !important;
   justify-content: center !important;
 }
+
+.grow{
+  transform: scale(0.95) ;
+  transition: 0.2s;
+}
+
+.grow:hover{
+  transform: scale(1) ;
+  transition: 0.2s;
+}

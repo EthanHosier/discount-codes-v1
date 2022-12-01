@@ -1,8 +1,9 @@
 import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
+import OfferCard from "./Cards/OfferCard";
 
-
-const SlickCarousel = () =>{
+//TODO: update so that is more universal, depending on input (has input for both offers, and logos)
+const SlickCarousel = ({offers}) =>{
 
     const [slider,setSlider] = useState();
 
@@ -52,11 +53,26 @@ const SlickCarousel = () =>{
       <div className="container">
         <Slider ref={s => setSlider(s)} {...settings}>
         
-          {[...Array(12)].map((e, i) =>{
+          {!offers? [...Array(12)].map((e, i) =>{
             return <div className="mx-0 d-flex justify-content-center align-items-center rounded-circle bg-white" id="carousel-logo-container">
             <img className="carousel-logo rounded" src="https://1000logos.net/wp-content/uploads/2020/07/Asos-Logo.jpg" />
           </div>
-          })}
+          }) : 
+
+          offers.map((off,i) =>{
+            return <OfferCard primaryImg={off.primaryImg} 
+            secondaryImg = {off.secondaryImg}
+            text={off.text}
+            discountCode={off.discountCode}
+            linkUrl={off.linkUrl}
+            width={200}
+            height={350}
+            buttonText={off.buttonText}
+            description={off.description}
+            icon={off.icon}
+    />
+          })
+          }
 
         </Slider>
       </div>

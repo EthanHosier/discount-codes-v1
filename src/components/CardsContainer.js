@@ -8,15 +8,15 @@ const CardsContainer = ({offers}) => {
     },[offers])
 
   return (
-    <div className='d-flex flex-wrap justify-content-center px-0' id="cards-container" >
+    <div className='d-flex flex-wrap justify-content-center px-0 mb-5' id="cards-container" >
         {!!offers && offers.map(off => {
             return <OfferCard primaryImg={off.primaryImg} 
                             secondaryImg = {off.secondaryImg}
                             text={off.text}
                             discountCode={off.discountCode}
                             linkUrl={off.linkUrl}
-                            width={300}
-                            height={350}
+                            width={275}
+                            height={315}
                             buttonText={off.buttonText}
                             description={off.description}
                             icon={off.icon}
