@@ -3,6 +3,7 @@ import CardsContainer from './CardsContainer'
 import SlickCarousel from './SlickCarousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faClock, faFire, faHourglass, faHourglass1, faHourglass2, faHourglass3} from '@fortawesome/free-solid-svg-icons'
+import OfferCategories from './OfferCategories'
 const Homepage = () => {
   
   const [data,setData] = useState([])
@@ -61,6 +62,7 @@ const Homepage = () => {
         </div>
         
         <CardsContainer offers={data}/>
+        <OfferCategories/>
       </div>
 
       <div className='container-fluid'>

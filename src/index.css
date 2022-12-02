@@ -3,7 +3,6 @@
 }
 
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,6 +16,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*REMOVES ALL LINK FORMATTING (REMOVE AFTER)*/
+a {
+  all: unset;
+}
+
+a:hover{
+  all: unset;
+  cursor: pointer;
+}
+
+
+
 
 .bg-light-grey{
   background-color: rgb(242, 242, 242) !important;
@@ -88,3 +100,13 @@ code {
   transform: scale(1) ;
   transition: 0.2s;
 }
+
+.fa-icon-category {
+  width: 2rem;
+}
+
+#xxx{
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+

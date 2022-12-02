@@ -2,7 +2,9 @@ import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import OfferCard from "./Cards/OfferCard";
 
-//TODO: update so that is more universal, depending on input (has input for both offers, and logos)
+/*TODO: 1. update so that is more universal, depending on input (has input for both offers, and logos)
+        2. update so that 
+*/
 const SlickCarousel = ({offers}) =>{
 
     const [slider,setSlider] = useState();
