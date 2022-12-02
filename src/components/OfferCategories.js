@@ -74,8 +74,8 @@ const OfferCategories = () => {
 
   return (
     <>
-      <h2 className='mt-3 mb-4'>Offer Categories</h2>
-      <div className='container row mb-5 bg-white rounded pl-5 pt-4 pb-4 '>
+      <h2 className='mt-5 mb-4'>Offer Categories</h2>
+      <div className='container row bg-white rounded pl-5 pt-4 pb-4 '>
 
         {CATEGORIES.map((c,i) =>{
           return <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 d-flex my-3 grow"><strong><a id="xxx" href={`/categories/${c.name}`} ><FontAwesomeIcon icon={c.icon} className="fa-icon-category text-warning"/> {c.name}</a></strong></div>

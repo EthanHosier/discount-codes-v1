@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import CardsContainer from './CardsContainer'
 import SlickCarousel from './SlickCarousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faClock, faFire, faHourglass, faHourglass1, faHourglass2, faHourglass3} from '@fortawesome/free-solid-svg-icons'
+import {faArrowAltCircleRight, faArrowRight, faClock, faFire, faHourglass, faHourglass1, faHourglass2, faHourglass3} from '@fortawesome/free-solid-svg-icons'
 import OfferCategories from './OfferCategories'
 const Homepage = () => {
   
@@ -49,11 +49,7 @@ const Homepage = () => {
         <h1>Logo</h1>
       </div>
 
-      <div className='container-fluid d-flex flex-column align-items-center bg-light-grey'>
-        <h2 className='my-5'>Our Top Brands</h2>
-        <SlickCarousel/>
-      </div>
-
+    
       <div className='container-fluid d-flex flex-column align-items-center  bg-light-grey'>
         <div className='container-fluid d-flex justify-content-center'>
           <h2 className='my-5'>Today's 
@@ -62,8 +58,22 @@ const Homepage = () => {
         </div>
         
         <CardsContainer offers={data}/>
+     
+        <h2 className='my-4'>Our Top Brands</h2>
+        <SlickCarousel logos="x" multipleItems/>
+
+        <div className='container d-flex mt-5 mr-5 flex-row-reverse'>
+          <a href='/brands'> <strong>All Brands <FontAwesomeIcon icon={faArrowRight}/></strong></a>
+        </div>
+
         <OfferCategories/>
+        <div className='container d-flex mt-4 mb-5 mr-5 flex-row-reverse'>
+          <a href='/categories'> <strong>All Categories <FontAwesomeIcon icon={faArrowRight}/></strong></a>
+        </div>
       </div>
+
+
+     
 
       <div className='container-fluid'>
         <div className='container p-5'>
@@ -86,7 +96,7 @@ const Homepage = () => {
 
       <div className='container-fluid bg-light-grey p-5 d-flex align-items-center flex-column'>
         <h2>Offers <span className='text-warning'>Ending Soon <FontAwesomeIcon icon={faHourglass2}/></span></h2>
-        <SlickCarousel offers={data2}/>
+        <SlickCarousel offers={data2} multipleItems/>
       </div>
     </>
   )
