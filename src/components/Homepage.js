@@ -2,20 +2,21 @@ import React, {useEffect, useState} from 'react'
 import CardsContainer from './CardsContainer'
 import SlickCarousel from './SlickCarousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faArrowAltCircleRight, faArrowRight, faClock, faFire, faHourglass, faHourglass1, faHourglass2, faHourglass3} from '@fortawesome/free-solid-svg-icons'
+import {faArrowRight, faFire, faHourglass2} from '@fortawesome/free-solid-svg-icons'
 import OfferCategories from './OfferCategories'
 const Homepage = () => {
   
   const [data,setData] = useState([])
   const [data2, setData2] = useState([])
+  const [images, setImages] = useState([])
 
   useEffect(() => {
     const arr = new Array(12)
     for(let i = 0; i< arr.length; i++){
       arr[i] = 
       {
-        primaryImg: "https://www.shutterstock.com/image-vector/woman-man-clothes-accessories-collection-260nw-1488991403.jpg",
-        secondaryImg: "https://1000logos.net/wp-content/uploads/2020/07/Asos-Logo.jpg",
+        primaryImg: "https://upload.wikimedia.org/wikipedia/en/d/d8/JD_Sports_logo.svg",
+        secondaryImg: "https://www.transparentpng.com/thumb/50-off/mD3qe9-50-off-clipart-photos.png",
         description:"Use this exclusive code and take 10% off and free delivery!",
         discountCode:"code",
         linkUrl:"asdsa",
@@ -30,7 +31,7 @@ const Homepage = () => {
     for(let i = 0; i< arr.length; i++){
       arr2[i] = 
       {
-        primaryImg: "https://www.shutterstock.com/image-vector/woman-man-clothes-accessories-collection-260nw-1488991403.jpg",
+        primaryImg: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lady-apples-at-organic-farmers-market-royalty-free-image-1627315148.jpg?crop=0.66682xw:1xh;center,top&resize=480:*",
         secondaryImg: "https://1000logos.net/wp-content/uploads/2020/07/Asos-Logo.jpg",
         description:"Use this exclusive code and take 10% off and free delivery!",
         discountCode:"code",
@@ -40,17 +41,21 @@ const Homepage = () => {
       }
     }
     setData2(arr2)
+
+    const arr3 = new Array(4)
+    for(let i = 0; i< arr.length; i++){
+      arr3[i] = "https://www.discountvouchers.co.uk/images/banners/homepage/dvblogsitebanner2021.1630506672.jpg"
+    }
+    setImages(arr3)
   }, [])
   
   
   return (
    <>
-      <div className='container-fluid d-flex justify-content-center p-5'>
-        <h1>Logo</h1>
-      </div>
+     
 
     
-      <div className='container-fluid d-flex flex-column align-items-center  bg-light-grey'>
+      <div className='container-fluid d-flex flex-column align-items-center bg-light-grey'>
         <div className='container-fluid d-flex justify-content-center'>
           <h2 className='my-5'>Today's 
           <span className='text-warning'> HOT<FontAwesomeIcon icon={faFire} />
@@ -63,17 +68,15 @@ const Homepage = () => {
         <SlickCarousel logos="x" multipleItems/>
 
         <div className='container d-flex mt-5 mr-5 flex-row-reverse'>
-          <a href='/brands'> <strong>All Brands <FontAwesomeIcon icon={faArrowRight}/></strong></a>
+          <a href='/brands' className='link-dark'> <strong>All Brands <FontAwesomeIcon icon={faArrowRight}/></strong></a>
         </div>
 
         <OfferCategories/>
         <div className='container d-flex mt-4 mb-5 mr-5 flex-row-reverse'>
-          <a href='/categories'> <strong>All Categories <FontAwesomeIcon icon={faArrowRight}/></strong></a>
+          <a href='/categories' className='link-dark'> <strong>All Categories <FontAwesomeIcon icon={faArrowRight}/></strong></a>
         </div>
       </div>
 
-
-     
 
       <div className='container-fluid'>
         <div className='container p-5'>
@@ -95,7 +98,7 @@ const Homepage = () => {
       </div>  
 
       <div className='container-fluid bg-light-grey p-5 d-flex align-items-center flex-column'>
-        <h2>Offers <span className='text-warning'>Ending Soon <FontAwesomeIcon icon={faHourglass2}/></span></h2>
+        <h2 className='mb-4'>Offers <span className='text-warning'>Ending Soon <FontAwesomeIcon icon={faHourglass2}/></span></h2>
         <SlickCarousel offers={data2} multipleItems/>
       </div>
     </>

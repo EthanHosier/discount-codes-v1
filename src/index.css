@@ -23,9 +23,9 @@ a {
 }
 
 a:hover{
-  all: unset;
   cursor: pointer;
 }
+
 
 
 
@@ -77,8 +77,15 @@ a:hover{
   height: 50px ;
 }
 
+/*
 .slick-next{display: none !important;}
 .slick-prev{display: none !important;}
+
+*/
+
+.slick-next{filter:invert(100) !important;}
+.slick-prev{filter:invert(100) !important;}
+
 
 #carousel-logo-container{
   height: 200px !important;
@@ -110,3 +117,23 @@ a:hover{
   font-size: 1.2rem;
 }
 
+#images-div{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.offer-categories-page-category{
+  width: 12rem;
+}
+
+#offer-categories-page-cat-container{
+  max-width: 1000px;
+}
+
+.custom-rounded {
+  border-radius: 6% !important;
+}
+
+.brands-page-img{
+  width: 100px;
+}

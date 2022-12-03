@@ -2,9 +2,6 @@ import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import OfferCard from "./Cards/OfferCard";
 
-/*TODO: 1. update so that is more universal, depending on input (has input for both offers, and logos)
-        2. update so that 
-*/
 const SlickCarousel = ({offers,multipleItems, logos, images}) =>{
 
     const [slider,setSlider] = useState();
@@ -44,7 +41,7 @@ const SlickCarousel = ({offers,multipleItems, logos, images}) =>{
             }
           },
           {
-            breakpoint: offers? 700: 480,
+            breakpoint: offers? 775: 480,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -78,7 +75,7 @@ const SlickCarousel = ({offers,multipleItems, logos, images}) =>{
             text={off.text}
             discountCode={off.discountCode}
             linkUrl={off.linkUrl}
-            width={250}
+            width={275}
             height={350}
             buttonText={off.buttonText}
             description={off.description}
@@ -87,7 +84,9 @@ const SlickCarousel = ({offers,multipleItems, logos, images}) =>{
           })
           :
           images?
-          <></>
+          images.map((e,i)=>{
+            return <img src={e}></img>
+          })
           :
           logos?
           [...Array(12)].map((e, i) =>{

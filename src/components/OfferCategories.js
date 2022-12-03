@@ -78,9 +78,8 @@ const OfferCategories = () => {
       <div className='container row bg-white rounded pl-5 pt-4 pb-4 '>
 
         {CATEGORIES.map((c,i) =>{
-          return <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 d-flex my-3 grow"><strong><a id="xxx" href={`/categories/${c.name}`} ><FontAwesomeIcon icon={c.icon} className="fa-icon-category text-warning"/> {c.name}</a></strong></div>
+          return <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 d-flex my-3 grow"><strong><a className='link-dark' id="xxx" href={`/categories/${c.name}`} ><FontAwesomeIcon icon={c.icon} className="fa-icon-category text-warning"/> {c.name}</a></strong></div>
         })}
-      
       </div>
     </>
   )

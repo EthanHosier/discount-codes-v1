@@ -1,14 +1,14 @@
 import React from 'react'
-import LogoBar from './LogoBar'
 import Navbar from './Navbar'
-import Homepage from './Homepage'
+import Footer from './Footer'
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
     <div >
-        <LogoBar/>
         <Navbar/>
-        <Homepage/>
+        <Outlet/>
+        <Footer/>
     </div>
   )
 }
