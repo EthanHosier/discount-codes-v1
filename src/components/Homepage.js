@@ -56,20 +56,27 @@ const Homepage = () => {
 
     
       <div className='container-fluid d-flex flex-column align-items-center bg-light-grey'>
-        <div className='container-fluid d-flex justify-content-center'>
-          <h2 className='my-5'>Today's 
-          <span className='text-warning'> HOT<FontAwesomeIcon icon={faFire} />
-          </span> Offers</h2>
-        </div>
         
-        <CardsContainer offers={data}/>
-     
         <h2 className='my-4'>Our Top Brands</h2>
         <SlickCarousel logos="x" multipleItems/>
-
         <div className='container d-flex mt-5 mr-5 flex-row-reverse'>
-          <a href='/brands' className='link-dark'> <strong>All Brands <FontAwesomeIcon icon={faArrowRight}/></strong></a>
+          <a href='/brands' className='link-dark mb-2'> <strong>All Brands <FontAwesomeIcon icon={faArrowRight}/></strong></a>
         </div>
+      </div>
+
+        <div className='container-fluid d-flex justify-content-center align-items-center flex-column rounded bg-white'>
+          <h2 className='my-5'>Today's 
+          <span className='text-warning'> HOT<FontAwesomeIcon icon={faFire} />
+          </span> Offers</h2>        
+          <CardsContainer offers={data}/>
+
+        </div>
+        
+     
+        
+
+       
+        <div className='container-fluid d-flex flex-column align-items-center bg-light-grey'>
 
         <OfferCategories/>
         <div className='container d-flex mt-4 mb-5 mr-5 flex-row-reverse'>
